@@ -3,9 +3,7 @@ class Solution {
         String answer = "";
         String[] arr = my_string.split("");
         for(int i=0; i<arr.length; i++) {
-            for(int j=1; j<=n; j++) {
-                answer += arr[i];
-            }
+            answer += arr[i].repeat(n);
         }
         return answer;
     }
