@@ -1,22 +1,17 @@
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Arrays;
 
 class Solution {
    public int solution(String before, String after) {
-        ArrayList<Character> arrBefore = new ArrayList<>();
-        ArrayList<Character> arrAfter = new ArrayList<>();
+        char[] a = before.toCharArray();
+        char[] b = after.toCharArray();
 
-        for (int i = 0; i < before.length(); i++) {
-            arrBefore.add(before.charAt(i));
-        }
-        for (int j = 0; j < after.length(); j++) {
-            arrAfter.add(after.charAt(j));
-        }
+        Arrays.sort(a);
+        Arrays.sort(b);
 
-        Collections.sort(arrBefore);
-        Collections.sort(arrAfter);
-
-        if (arrBefore.equals(arrAfter)) {
+        String strA = String.valueOf(a);
+        String strB = String.valueOf(b);
+       
+        if(strA.equals(strB)) {
             return 1;
         } else {
             return 0;
